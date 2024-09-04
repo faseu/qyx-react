@@ -6,8 +6,10 @@ import { web_link } from "../assets"
 import { SectionWrapper } from "../hoc"
 import { projects } from "../constants"
 import { fadeIn, textVariant } from "../utils/motion"
+import {Route} from "react-router-dom";
+import Blog from "../pages/Blog.jsx";
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link, live_link }) => {
+export const ProjectCard = ({ index, name, description, tags, image, source_code_link, live_link }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <a href={source_code_link} target="_blank" rel="noreferrer">
@@ -17,7 +19,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
             scale: 1,
             speed: 450
           }}
-          className="bg-light-bg p-5 rounded-2xl sm:w-[360px] w-full max-w-[330px]"
+          className="bg-base-200 p-5 rounded-2xl sm:w-[360px] w-full max-w-[330px]"
         >
           <div className="relative w-full h-[230px]">
             <img
@@ -75,21 +77,20 @@ const Works = () => {
       </motion.div>
 
       <div className="w-full flex">
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-2xl leading-[30px]"
-        >
-          These are my featured projects; ones in which I am particular proud of or made me learn something new.
-          <br />
-          <br />
+          <motion.p
+              variants={fadeIn("", "", 0.1, 1)}
+              className="mt-3 text-secondary text-[17px] max-w-2xl leading-[30px]"
+          >
+              These are my featured projects; ones in which I am particular proud of or made me learn something new.
+              <br/>
+              <br/>
 
-          <a href="https://davidcao.xyz/legacy-portfolio/ProjectsPage/index.html" target="_blank" className="font-medium text-orange-600 dark:text-orange-500 hover:underline cursor-pointer">If you want to see more of my work, click here!</a>
-
-        </motion.p>
+              <a className="text-lg btn btn-primary" href="/all-projects">SEE ALL PROJECTS</a>
+          </motion.p>
       </div>
 
-      <div className="mt-20 flex flex-wrap gap-7">
-        {projects.map((project, index) => {
+        <div className="mt-20 flex flex-wrap gap-7">
+            {projects.map((project, index) => {
           return (
             <ProjectCard key={`project-${index}`}
               index={index}
@@ -97,7 +98,6 @@ const Works = () => {
             />
           )
         })}
-
       </div>
     </>
   )
