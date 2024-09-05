@@ -9,12 +9,14 @@ import david_logo from '../assets/david-logo.png';
 const Navbar = () => {
   const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
+  const [pathname, setPathname] = useState('/');
   // Use state to store the visibility and position of the navbar
   const [visible, setVisible] = useState(true);
   const [position, setPosition] = useState('absolute');
 
   // Use effect to add an event listener to the window object to detect scroll events
   useEffect(() => {
+    setPathname(window.location.pathname);
     window.addEventListener('scroll', handleScroll);
 
     // Cleanup function
@@ -65,14 +67,32 @@ const Navbar = () => {
         <ul
           className={`list-none hidden sm:flex flex-row gap-10 transition-all duration-300`}
         >
-          <li
-            className={`${active === 'projects' ? 'text-secondary' : 'text-secondary'} hover:text-accent text-[18px] font-medium cursor-pointer flex items-center`}
-            onClick={() => {
-              setActive('projects');
-            }}
-          >
-            <Link to="/projects">All Projects</Link>
-          </li>
+          {/*<li*/}
+          {/*  className={`text-secondary hover:text-accent text-[18px] font-medium cursor-pointer flex items-center`}*/}
+          {/*  onClick={() => {*/}
+          {/*    setActive('projects');*/}
+          {/*  }}*/}
+          {/*>*/}
+          {/*  <Link to="/projects">All Projects</Link>*/}
+          {/*</li>*/}
+          {/*<li*/}
+          {/*  className={`text-secondary hover:text-accent text-[18px] font-medium cursor-pointer flex items-center`}*/}
+          {/*  onClick={() => {*/}
+          {/*    setActive('home');*/}
+          {/*  }}*/}
+          {/*>*/}
+          {/*  <Link to="/">Home</Link>*/}
+          {/*</li>*/}
+          {pathname === '/' && (
+            <li className="text-secondary hover:text-accent text-[18px] font-medium cursor-pointer flex items-center">
+              <Link to="/projects">All Projects</Link>
+            </li>
+          )}
+          {pathname === '/projects' && (
+            <li className="text-secondary hover:text-accent text-[18px] font-medium cursor-pointer flex items-center">
+              <Link to="/">Home</Link>
+            </li>
+          )}
           {navLinks.map((link) => {
             return (
               <li
@@ -88,14 +108,15 @@ const Navbar = () => {
               </li>
             );
           })}
-          <img
-            src={toggle ? light : dark}
-            alt="menu"
-            className="w-[36px] h-[36px] object-contain cursor-pointer"
-            onClick={() => {
-              setToggle(!toggle);
-            }}
-          />
+          {/*todo*/}
+          {/*<img*/}
+          {/*  src={toggle ? light : dark}*/}
+          {/*  alt="menu"*/}
+          {/*  className="w-[36px] h-[36px] object-contain cursor-pointer"*/}
+          {/*  onClick={() => {*/}
+          {/*    setToggle(!toggle);*/}
+          {/*  }}*/}
+          {/*/>*/}
         </ul>
 
         {/* Logic to switch hamburger menu images */}

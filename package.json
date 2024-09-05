@@ -37,6 +37,7 @@
     "react-tsparticles": "^2.12.2",
     "react-vertical-timeline-component": "^3.6.0",
     "slick-carousel": "^1.8.1",
+    "swiper": "^11.1.12",
     "three": "^0.160.0",
     "tsparticles": "^3.0.3",
     "typed.js": "^2.1.0"

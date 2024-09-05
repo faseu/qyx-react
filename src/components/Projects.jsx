@@ -26,9 +26,6 @@ const Works = () => {
           or made me learn something new.
           <br />
           <br />
-          <a className="text-lg btn btn-primary" href="/all-projects">
-            SEE ALL PROJECTS
-          </a>
         </motion.p>
       </div>
       <h2 className="divider text-black mt-20 font-black text-3xl">
