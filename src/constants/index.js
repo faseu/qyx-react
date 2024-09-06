@@ -233,7 +233,8 @@ const projects = [
       },
     ],
     image: bookshelfChronicles,
-    about: 'A storyboard artist who was looking for a job reached out to me to see if I could create a simple website for him that could show-case his work while he searched for a job. The website is created with plain HTML, CSS3, and Javascript making it simple but effective. It showcases all his photos and featured storyboards.',
+    about:
+      'A storyboard artist who was looking for a job reached out to me to see if I could create a simple website for him that could show-case his work while he searched for a job. The website is created with plain HTML, CSS3, and Javascript making it simple but effective. It showcases all his photos and featured storyboards.',
     source_code_link: 'https://github.com/dave-cao/Book-Chronicles',
     live_link: 'https://dave-cao.github.io/Book-Chronicles/',
   },
@@ -255,7 +256,8 @@ const projects = [
       },
     ],
     image: cleverkiddos,
-    about: 'B storyboard artist who was looking for a job reached out to me to see if I could create a simple website for him that could show-case his work while he searched for a job. The website is created with plain HTML, CSS3, and Javascript making it simple but effective. It showcases all his photos and featured storyboards.',
+    about:
+      'B storyboard artist who was looking for a job reached out to me to see if I could create a simple website for him that could show-case his work while he searched for a job. The website is created with plain HTML, CSS3, and Javascript making it simple but effective. It showcases all his photos and featured storyboards.',
     source_code_link: 'https://clever-kiddos-daycare.vercel.app/',
   },
   {
@@ -277,7 +279,8 @@ const projects = [
       },
     ],
     image: aifluently,
-    about: 'C storyboard artist who was looking for a job reached out to me to see if I could create a simple website for him that could show-case his work while he searched for a job. The website is created with plain HTML, CSS3, and Javascript making it simple but effective. It showcases all his photos and featured storyboards.',
+    about:
+      'C storyboard artist who was looking for a job reached out to me to see if I could create a simple website for him that could show-case his work while he searched for a job. The website is created with plain HTML, CSS3, and Javascript making it simple but effective. It showcases all his photos and featured storyboards.',
     source_code_link: 'https://www.aifluently.com/',
   },
   {
@@ -298,7 +301,8 @@ const projects = [
       },
     ],
     image: williamPortfolio,
-    about: 'D storyboard artist who was looking for a job reached out to me to see if I could create a simple website for him that could show-case his work while he searched for a job. The website is created with plain HTML, CSS3, and Javascript making it simple but effective. It showcases all his photos and featured storyboards.',
+    about:
+      'D storyboard artist who was looking for a job reached out to me to see if I could create a simple website for him that could show-case his work while he searched for a job. The website is created with plain HTML, CSS3, and Javascript making it simple but effective. It showcases all his photos and featured storyboards.',
     source_code_link: 'https://github.com/dave-cao/williamPortfolio',
     live_link: 'https://www.williamheng.ca/',
   },
@@ -321,7 +325,8 @@ const projects = [
       },
     ],
     image: studybot,
-    about: 'E storyboard artist who was looking for a job reached out to me to see if I could create a simple website for him that could show-case his work while he searched for a job. The website is created with plain HTML, CSS3, and Javascript making it simple but effective. It showcases all his photos and featured storyboards.',
+    about:
+      'E storyboard artist who was looking for a job reached out to me to see if I could create a simple website for him that could show-case his work while he searched for a job. The website is created with plain HTML, CSS3, and Javascript making it simple but effective. It showcases all his photos and featured storyboards.',
     source_code_link: 'https://github.com/dave-cao/Study-Bot',
     live_link: '',
   },
@@ -344,7 +349,8 @@ const projects = [
       },
     ],
     image: physmatch,
-    about: 'F storyboard artist who was looking for a job reached out to me to see if I could create a simple website for him that could show-case his work while he searched for a job. The website is created with plain HTML, CSS3, and Javascript making it simple but effective. It showcases all his photos and featured storyboards.',
+    about:
+      'F storyboard artist who was looking for a job reached out to me to see if I could create a simple website for him that could show-case his work while he searched for a job. The website is created with plain HTML, CSS3, and Javascript making it simple but effective. It showcases all his photos and featured storyboards.',
     source_code_link: 'https://devpost.com/software/physmatch',
     live_link: '',
   },

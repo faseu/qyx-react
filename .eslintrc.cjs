@@ -17,7 +17,7 @@ module.exports = {
       { allowConstantExport: true },
     ],
     'react/prop-types': 'off',
-    'react/react-in-jsx-scope': 'off',  // React 17 及以后不再需要 React 在 JSX 中的范围内
-    'no-unused-vars': ['error', { varsIgnorePattern: 'React' }],  // 忽略未使用的 React 导入
+    'react/react-in-jsx-scope': 'off', // React 17 及以后不再需要 React 在 JSX 中的范围内
+    'no-unused-vars': ['error', { varsIgnorePattern: 'React' }], // 忽略未使用的 React 导入
   },
-}
+};

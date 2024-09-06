@@ -1,18 +1,16 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
-import { Suspense, useEffect, useState } from "react"
-import { Canvas } from "@react-three/fiber"
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei"
-import CanvasLoader from "../Loader"
+import { Suspense, useEffect, useState } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
+import CanvasLoader from '../Loader';
 
 const Computers = ({ isMobile }) => {
-
-  const computer = useGLTF("./cyber_djinn/scene.gltf")
+  const computer = useGLTF('./cyber_djinn/scene.gltf');
 
   return (
     <mesh>
-      <hemisphereLight intensity={1000}
-        groundColor="black" />
+      <hemisphereLight intensity={1000} groundColor="black" />
 
       <pointLight intensity={0} />
       <spotLight
@@ -29,34 +27,32 @@ const Computers = ({ isMobile }) => {
         rotation={[-0.01, 4.6, -0.1]}
       />
     </mesh>
-  )
-}
+  );
+};
 
 const ComputersCanvas = ({ loading }) => {
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-
     // add event listener for changes to the screen size
-    const mediaQuery = window.matchMedia("(max-width: 755px)");
+    const mediaQuery = window.matchMedia('(max-width: 755px)');
 
     // initial value of the isMobile state variable
-    setIsMobile(mediaQuery.matches)
+    setIsMobile(mediaQuery.matches);
 
     // define a callback function to handle changes to the media query
     const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches)
-    }
+      setIsMobile(event.matches);
+    };
 
-    // add the callback function as a listender for changes to the 
+    // add the callback function as a listender for changes to the
     // media query
-    mediaQuery.addEventListener("change", handleMediaQueryChange)
+    mediaQuery.addEventListener('change', handleMediaQueryChange);
 
     return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange)
-    }
-  }, [])
-
+      mediaQuery.removeEventListener('change', handleMediaQueryChange);
+    };
+  }, []);
 
   return (
     <Canvas
@@ -78,7 +74,7 @@ const ComputersCanvas = ({ loading }) => {
 
       <Preload all />
     </Canvas>
-  )
-}
+  );
+};
 
-export default ComputersCanvas
+export default ComputersCanvas;

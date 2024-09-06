@@ -1,72 +1,74 @@
-import { useState, useRef, formRef } from "react";
-import { motion } from "framer-motion"
-import emailjs from "@emailjs/browser"
+import { useState, useRef, formRef } from 'react';
+import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
-import { styles } from "../styles"
-import { EarthCanvas } from "./canvas"
-import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
-import toast, { Toaster } from "react-hot-toast"
+import { styles } from '../styles';
+import { EarthCanvas } from './canvas';
+import { SectionWrapper } from '../hoc';
+import { slideIn } from '../utils/motion';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Contact = () => {
-
   const [form, setForm] = useState({
     name: '',
     email: '',
     message: '',
-  })
+  });
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value } = e.target
-    setForm({ ...form, [name]: value })
-
-  }
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
 
   const sendEmail = async () => {
     setLoading(true);
-    return emailjs.send(
-      "service_bghs4dw",
-      "template_k8q1ogv",
-      {
-        from_name: form.name,
-        to_name: "David",
-        from_email: form.email,
-        to_email: "l5713977886@outlook.com",
-        message: form.message
-      },
-      "P3NqA-kaldqM-NsoA",
-    )
+    return emailjs
+      .send(
+        'service_bghs4dw',
+        'template_k8q1ogv',
+        {
+          from_name: form.name,
+          to_name: 'David',
+          from_email: form.email,
+          to_email: 'l5713977886@outlook.com',
+          message: form.message,
+        },
+        'P3NqA-kaldqM-NsoA',
+      )
       .then(() => {
-        setLoading(false)
+        setLoading(false);
 
-        setForm({
-          name: "",
-          email: "",
-          message: "",
-        }, (error) => {
-          setLoading(false)
-          console.log(error);
-          alert("Something went wrong.")
-        })
-      })
-  }
+        setForm(
+          {
+            name: '',
+            email: '',
+            message: '',
+          },
+          (error) => {
+            setLoading(false);
+            console.log(error);
+            alert('Something went wrong.');
+          },
+        );
+      });
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     // toastify sending email
     toast.promise(sendEmail(), {
-      loading: "Sending your message...",
-      success: "Your message has been sent! Please wait for me to contact you back!",
-      error: "Error while sending your message..."
-    })
-
-  }
+      loading: 'Sending your message...',
+      success:
+        'Your message has been sent! Please wait for me to contact you back!',
+      error: 'Error while sending your message...',
+    });
+  };
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div
-        variants={slideIn('left', "tween", 0.2, 1)}
+        variants={slideIn('left', 'tween', 0.2, 1)}
         className="flex-[0.75] bg-base-200 p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
@@ -116,21 +118,20 @@ const Contact = () => {
             type="submit"
             className="bg-neutral py-3 px-8 outline-none w-fit text-accent font-bold shadow-md shadow-primary rounded-xl"
           >
-            {loading ? "Sending..." : "Send"}
+            {loading ? 'Sending...' : 'Send'}
           </button>
         </form>
       </motion.div>
 
       <motion.div
-        variants={slideIn('right', "tween", 0.2, 1)}
+        variants={slideIn('right', 'tween', 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
         <EarthCanvas />
       </motion.div>
       <Toaster position="bottom-center" />
-
     </div>
-  )
-}
+  );
+};
 
-export default SectionWrapper(Contact, "contact")
+export default SectionWrapper(Contact, 'contact');

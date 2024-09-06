@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 const LoadingScreen = ({ loading }) => {
-  const [hidden, setHidden] = useState(false)
+  const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
     // After the fade-out effect, hide the loading screen

@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import { Html, useProgress } from "@react-three/drei"
+import { Html, useProgress } from '@react-three/drei';
 
 const Loader = ({ loading }) => {
-  const { progress } = useProgress()
+  const { progress } = useProgress();
 
   return (
     <Html>
@@ -12,11 +12,13 @@ const Loader = ({ loading }) => {
           fontSize: 14,
           color: '#f1f1f1',
           fontWeight: 800,
-          marginTop: 40
+          marginTop: 40,
         }}
-      >{progress.toFixed(2)}%</p>
+      >
+        {progress.toFixed(2)}%
+      </p>
     </Html>
-  )
-}
+  );
+};
 
-export default Loader
+export default Loader;

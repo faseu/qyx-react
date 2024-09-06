@@ -6,8 +6,8 @@ import { web_link } from '../assets';
 import { SectionWrapper } from '../hoc';
 import { projects } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
-import { Route } from 'react-router-dom';
-import Projects from '../pages/Projects.jsx';
+import { Link, Route } from 'react-router-dom';
+import Projects from '../pages/projects/projects.jsx';
 import { ProjectCard } from './index.js';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -18,6 +18,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import { EffectCoverflow, Autoplay, Pagination } from 'swiper/modules';
+import React from 'react';
 const Works = () => {
   const settings = {
     className: 'center',
@@ -43,12 +44,7 @@ const Works = () => {
           or made me learn something new.
           <br />
           <br />
-          <a
-            className="text-lgs inline-block p-[8px] rounded-md bg-[#8c0327] text-white"
-            href="/projects"
-          >
-            SEE ALL PROJECTS
-          </a>
+          <Link className="text-lgs inline-block p-[8px] rounded-md bg-[#8c0327] text-white" to="/projects">SEE ALL PROJECTS</Link>
         </motion.p>
       </div>
       <Swiper
