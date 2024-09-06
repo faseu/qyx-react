@@ -48,7 +48,7 @@ const About = () => {
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
         <p>
-          Welcome to my profile! My name is David, a software developer
+          Welcome to my profile! My name is ***, a software developer
           dedicated to guiding you through the perils of the web and tech.
           Technology can be scary, but it doesn't have to be. Let me help you.
         </p>

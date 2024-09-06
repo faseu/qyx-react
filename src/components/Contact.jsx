@@ -34,8 +34,7 @@ const Contact = () => {
           to_email: 'l5713977886@outlook.com',
           message: form.message,
         },
-         'MgYIQ3fcyBzKK45JU',
-
+        'MgYIQ3fcyBzKK45JU',
       )
       .then(() => {
         setLoading(false);

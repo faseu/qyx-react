@@ -44,7 +44,12 @@ const Works = () => {
           or made me learn something new.
           <br />
           <br />
-          <Link className="text-lgs inline-block p-[8px] rounded-md bg-[#8c0327] text-white" to="/projects">SEE ALL PROJECTS</Link>
+          <Link
+            className="text-lgs inline-block p-[8px] rounded-md bg-[#8c0327] text-white"
+            to="/projects"
+          >
+            SEE ALL PROJECTS
+          </Link>
         </motion.p>
       </div>
       <Swiper
