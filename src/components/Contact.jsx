@@ -25,16 +25,17 @@ const Contact = () => {
     setLoading(true);
     return emailjs
       .send(
-        'service_bghs4dw',
-        'template_k8q1ogv',
+        'service_n87ghll',
+        'template_xry6mlo',
         {
           from_name: form.name,
-          to_name: 'David',
+          to_name: '牛肉煎鸡蛋',
           from_email: form.email,
           to_email: 'l5713977886@outlook.com',
           message: form.message,
         },
-        'P3NqA-kaldqM-NsoA',
+         'MgYIQ3fcyBzKK45JU',
+
       )
       .then(() => {
         setLoading(false);
